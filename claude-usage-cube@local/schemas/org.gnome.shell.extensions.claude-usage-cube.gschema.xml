@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.claude-usage-cube"
+          path="/org/gnome/shell/extensions/claude-usage-cube/">
+    <key name="poll-interval" type="u">
+      <default>180</default>
+      <range min="60" max="3600"/>
+      <summary>Seconds between usage checks</summary>
+    </key>
+    <key name="show-percent" type="b">
+      <default>false</default>
+      <summary>Show the percentage next to the cube</summary>
+    </key>
+    <key name="panel-position" type="s">
+      <choices>
+        <choice value="left"/>
+        <choice value="center"/>
+        <choice value="right"/>
+      </choices>
+      <default>'right'</default>
+      <summary>Which side of the top bar the cube sits on</summary>
+    </key>
+    <key name="data-source" type="s">
+      <choices>
+        <choice value="auto"/>
+        <choice value="oauth"/>
+        <choice value="statusline"/>
+      </choices>
+      <default>'auto'</default>
+      <summary>Where usage data comes from</summary>
+      <description>auto: OAuth API, falling back to the status-line file; oauth: API only; statusline: file only.</description>
+    </key>
+  </schema>
+</schemalist>

@@ -1,0 +1,8 @@
+{
+  "uuid": "claude-usage-cube@local",
+  "name": "Claude Usage Cube",
+  "description": "A colored cube in the top bar showing your Claude 5-hour session usage.",
+  "shell-version": ["49", "50"],
+  "settings-schema": "org.gnome.shell.extensions.claude-usage-cube",
+  "version-name": "0.1"
+}

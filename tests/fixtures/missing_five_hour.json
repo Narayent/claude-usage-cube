@@ -1,0 +1,3 @@
+{"seven_day": {"utilization": 40.0, "resets_at": "2026-10-26T11:00:00+00:00"},
+ "limits": [{"kind": "weekly_all", "percent": 40, "resets_at": "2026-10-26T11:00:00+00:00"},
+            {"kind": "session", "percent": 63, "resets_at": "2026-10-22T15:10:00.012122+00:00"}]}
