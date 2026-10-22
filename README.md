@@ -1,10 +1,10 @@
 # Claude Usage Cube
 
-A GNOME Shell extension that puts a small rounded square in the top bar. Its color shows how much of your
-**Claude 5-hour session limit** you've used: green → yellow → orange → red (smoothly blended).
+A GNOME Shell extension that puts a small rounded pretty square in the top bar. Its color shows how much of your
+Claude 5-hour session limit you've used: green → yellow → orange → red (kinda smoothly blended, did my best).
 Click it for the exact percentage, when the window resets, your 7-day usage, and a "Refresh now" button.
 
-Works with a Claude Pro/Max subscription. **No API key needed**: it reuses the login Claude Code already stores.
+usually works with a Claude Pro/Max subscription. No API key needed: it reuses the login Claude Code already stores.
 
 Tested on Fedora 44, GNOME Shell 50 (Wayland). `metadata.json` declares GNOME 49 and 50.
 
@@ -14,7 +14,7 @@ Tested on Fedora 44, GNOME Shell 50 (Wayland). `metadata.json` declares GNOME 49
 make install          # copies to ~/.local/share/gnome-shell/extensions/claude-usage-cube@local
 ```
 
-On Wayland the running shell can't load new extension code: **log out and back in**, then
+On Wayland the running shell can't load new extension code: log out and back in, then
 
 ```sh
 gnome-extensions enable claude-usage-cube@local
@@ -46,7 +46,7 @@ Cube states: colored = current usage; grey = no data (menu says why, with "!" if
 `GET https://api.anthropic.com/api/oauth/usage` with the access token from `~/.claude/.credentials.json`.
 It counts all your usage (claude.ai chats included, not just Claude Code).
 
-> ⚠️ **This endpoint is unofficial and undocumented.** It can change or disappear without notice.
+> This endpoint is unofficial and undocumented. It can change or disappear without notice. That wouldn't be great.
 > The extension parses it defensively and shows grey instead of breaking, but it may stop working.
 
 - The token is read fresh on every check (Claude Code refreshes it). The extension never refreshes tokens,
